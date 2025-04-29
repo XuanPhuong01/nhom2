@@ -1,4 +1,5 @@
 # nhom2python
+# Nguyễn Thị Xuân Phương- K225480106054_Nhóm 2
 Bài tập thực hành python
 Bài 1: 
 Thực hiện lấy dữ liệu thời tiết từ url sau: https://www.pokemon.com/us/api/pokedex/kalos
