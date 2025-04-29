@@ -1,0 +1,24 @@
+import pandas as pd
+
+# Đọc file Excel từ link (cần tải file về trước)
+file_path = r'C:\Users\Fptshop\Documents\python\data.xlsx'  # đổi đúng tên file tải về
+df = pd.read_excel(file_path)
+
+# Lọc dữ liệu theo điều kiện
+filtered_df = df[
+    (df['vpv2'] % 2 == 0) &
+    (df['pDisCharge'] % 2 == 0) &
+    (df['prec'] % 2 == 1)
+]
+
+# Lưu vào file mới
+filtered_df.to_csv('Data_new.csv', index=False)
+
+# Tính tổng vBus1 và vBus2, thêm cột mới
+df['Sum_vBUS'] = df['vBus1'] + df['vBus2']
+
+# Lưu lại file có cột mới
+df.to_csv('data_with_sum.csv', index=False)
+
+# In thử vài dòng đầu
+print(df.head())
